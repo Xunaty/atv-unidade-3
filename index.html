@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in de Ocorrências</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Registro de Ocorrências</h1>
+
+    <form onsubmit="return false">
+
+        <label>Título da Ocorrência:</label>
+        <br>
+        <input type="text" id="titulo">
+        <br><br>
+
+        <label>Descrição:</label>
+        <br>
+        <textarea id="descricao" rows="4"></textarea>
+        <br><br>
+
+      <p>Precisamo da sua localização para saber onde a ocorrência aconteceu.</p>
+        <button onclick="capturarLocalizacao()">Capturar Localização</button>
+        <p id="localizacao"></p>
+
+        <p id="mensagem"></p>
+
+        <button onclick="salvar()">Salvar</button>
+
+    </form>
+
+    <br>
+    <h2>Ocorrências Salvas</h2>
+    <div id="lista"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
